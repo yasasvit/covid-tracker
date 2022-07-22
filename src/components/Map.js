@@ -1,10 +1,18 @@
-import { MapRounded } from "@material-ui/icons";
-import React from "react";
+import React from 'react'
+import {MapContainer, TileLayer } from "react-leaflet";
+import "./Map.css";
+import { showDataOnMap } from '../util';
 
-const Map = () => {
+const Map = ({ countries, casesType, center, zoom }) => {
     return (
-        <div>
-            <h1>MAP Component</h1>
+        <div className="map">
+            <MapContainer center={center} zoom={zoom}>
+                <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                />
+                {showDataOnMap(countries, casesType)}
+            </MapContainer>
         </div>
     )
 }

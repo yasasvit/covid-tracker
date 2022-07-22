@@ -1,5 +1,5 @@
 body {
-  background-color: #f5f6fa;
+  background-color: #d7d9e8;
 }
 
 .app {
@@ -18,7 +18,8 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 25px;
-
+  color:rgb(13, 14, 14);
+  text-align: center;
 }
 
 .app_stats {
